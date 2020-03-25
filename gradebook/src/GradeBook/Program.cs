@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace GradeBook
 {
@@ -6,7 +7,15 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Let's shake this rust off!");
+            try
+            {
+                var name = args[0];
+                Console.WriteLine($"Hello, {name}!");
+            }
+            catch (System.IndexOutOfRangeException)
+            {
+                Console.WriteLine("Hello Nameless Traveler.");
+            }
         }
     }
 }
